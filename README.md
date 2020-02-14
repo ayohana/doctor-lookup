@@ -20,8 +20,13 @@
 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program Returns User's Medical Symptom** | rash | rash |
-| **Program Returns a List of Doctors via BetterDoctor API** | rash | List of Doctors |
+| **Program Gathers User Input of Medical Symptom** | rash | rash |
+| **Program Displays a List of Doctors Related to Symptom** | rash | List of Doctors best matched to rash |
+| **Program Displays a List of Doctors Related to Name Search** | Varley | List of Doctors with last name Varley |
+| **Program Displays Info of Each Doctor** | rash | Each Doctor: First name, Last name, Address, Phone number, Website and Status of "accepting new patients" |
+| **Program Returns Error Message in Console with Any Error Encounter** | any != 200 OK status | `console.error:` There was an error handling your request: `error.message` |
+| **Program Displays a Message if No Results in Query Response** | any unusual query | Sorry, no doctors meet the criteria you're looking for. |
+
 
 </details>
 
