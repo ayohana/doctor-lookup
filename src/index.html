@@ -20,9 +20,37 @@
         <button class="btn btn-lg btn-danger">Find Providers</button>
       </form>
     </div>
+    
+    <hr>
 
     <div class="container">
-      <p><span id="output"></span></p>
+      <div id="output">
+        <table class="table">
+          <caption>List of Doctors</caption>
+          <thead>
+            <tr class="table-danger">
+              <th scope="col">#</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Website</th>
+              <th scope="col">Accepting New Patients?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td id="firstName1"></td>
+              <td id="lastName1"></td>
+              <td id="address1"></td>
+              <td id="phoneNumber1"></td>
+              <td id="website1"></td>
+              <td id="acceptNewPatients1"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </body>
