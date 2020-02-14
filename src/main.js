@@ -18,23 +18,25 @@ $(document).ready(function(){
   // var html = template(context);
   // console.log(html);
 
-  var api_key = process.env.API_KEY; // Get your API key at developer.betterdoctor.com
+  var api_key = process.env.API_KEY;
 
-  var resource_url = 'https://api.betterdoctor.com/2016-03-01/doctors?location=wa-seattle&skip=2&limit=10&user_key=' + api_key;
+  var resource_url = 'https://api.betterdoctor.com/2016-03-01/doctors?specialty_uid=pediatrician&location=wa-seattle&skip=1&limit=5&user_key=' + api_key;
 
-  $.get(resource_url, function (data) {
+  $.get(resource_url, function (data, status) {
     // data: { meta: {<metadata>}, data: {<array[Practice]>} }
     var template = Handlebars.compile(document.getElementById('docs-template').innerHTML);
     document.getElementById('content-placeholder').innerHTML = template(data);
+    console.log(template(data));
+    console.log(status);
   });
 
-  var conditions_resource_url = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
-  $.get(conditions_resource_url, function (data) {
-      // data: { meta: {<metadata>}, data: {<array[Condition]>} }
-      
-      var template = Handlebars.compile(document.getElementById('conditions-template').innerHTML);
-      document.getElementById('conditions-content-placeholder').innerHTML = template(data);
-  });
+  // var conditions_resource_url = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
+  // $.get(conditions_resource_url, function (data) {
+  //   // data: { meta: {<metadata>}, data: {<array[Condition]>} }
+    
+  //   var template = Handlebars.compile(document.getElementById('conditions-template').innerHTML);
+  //   document.getElementById('conditions-content-placeholder').innerHTML = template(data);
+  // });
 
 
 

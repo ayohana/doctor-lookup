@@ -34,7 +34,7 @@
       </div>
     </script> -->
 
-    <h3>BetterDoctor - Conditions</h3>
+    <!-- <h3>BetterDoctor - Conditions</h3>
     <div id="conditions-content-placeholder"></div>
     <script id="conditions-template" type="text/x-handlebars-template">
         <table>
@@ -54,7 +54,7 @@
             {{/data}}
             </tbody>
         </table>
-    </script>
+    </script> -->
 
     <h3>BetterDoctor - Doctor Search Results</h3>
     <div id="content-placeholder"></div>
@@ -64,6 +64,7 @@
                 <th>Name</th>
                 <th>Title</th>
                 <th>Picture</th>
+                <th>Gender</th>
             </thead>
             <tbody>
             {{#data}}
@@ -72,6 +73,10 @@
                   <img src="{{ratings.0.image_url_small}}"></img></td>
                 <td>{{profile.title}}</td>
                 <td><img src="{{profile.image_url}}"></img></td>
+                <td> {{#specialties}}
+                  {{name}} <br>
+                  {{/specialties}}
+                </td>
             </tr>
             {{/data}}
             </tbody>
