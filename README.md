@@ -31,7 +31,7 @@
 * Sign up/Log in to [BetterDoctor](https://developer.betterdoctor.com/) to retrieve an API key.
   * Open `.env` file in the root directory.
   * Copy the API key from BetterDoctor.
-  * Paste the key to `[insert key here]` in `.env` file.
+  * Paste the key to replace `[insert key here]` in `.env` file.
     > API_KEY = `[insert key here]`
   * **Save** the `.env` file.
 
