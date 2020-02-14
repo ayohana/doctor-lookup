@@ -63,8 +63,9 @@
             <thead>
                 <th>Name</th>
                 <th>Title</th>
-                <th>Picture</th>
+                <th>Specialties</th>
                 <th>Gender</th>
+                <th>Picture</th>
             </thead>
             <tbody>
             {{#data}}
@@ -72,11 +73,12 @@
                 <td><a href="{{attribution_url}}" target="_new">{{profile.first_name}} {{profile.last_name}}</a><br>
                   <img src="{{ratings.0.image_url_small}}"></img></td>
                 <td>{{profile.title}}</td>
-                <td><img src="{{profile.image_url}}"></img></td>
                 <td> {{#specialties}}
                   {{name}} <br>
                   {{/specialties}}
                 </td>
+                <td>{{profile.gender}}</td>
+                <td><img src="{{profile.image_url}}"></img></td>
             </tr>
             {{/data}}
             </tbody>
