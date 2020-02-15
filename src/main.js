@@ -17,24 +17,26 @@ $(document).ready(function(){
     })();
 
     const displayList = function(response) {
-      console.log(response);
-      let firstName = response.data[0].profile.first_name;
-      let lastName = response.data[0].profile.last_name;
-      let practiceAddress = response.data[0].practices[0].visit_address;
-      let address = `${practiceAddress.street}, ${practiceAddress.city} ${practiceAddress.state} ${practiceAddress.zip}`;
-      let phoneNumber = response.data[0].practices[0].phones[0].number;
-      let website = `<a href="${response.data[0].practices[0].website}">${response.data[0].practices[0].name}</a>`;
-      let acceptNewPatients = response.data[0].practices[0].accepts_new_patients;
-
-      $("#firstName1").html(firstName);
-      $("#lastName1").html(lastName);
-      $("#address1").html(address);
-      $("#phoneNumber1").html(phoneNumber);
-      $("#website1").html(website);
-      $("#acceptNewPatients1").html(acceptNewPatients);
+      let doctor = response.data;
+      $("#listOfDoctors").show();
+      for (let i = 0; i < doctor.length; i++) {
+        let firstName = doctor[i].profile.first_name;
+        let lastName = doctor[i].profile.last_name;
+        let practiceAddress = doctor[i].practices[0].visit_address;
+        let address = `${practiceAddress.street}, ${practiceAddress.city} ${practiceAddress.state} ${practiceAddress.zip}`;
+        let phoneNumber = doctor[i].practices[0].phones[0].number;
+        let website = `<a href="${doctor[i].practices[0].website}">${doctor[i].practices[0].name}</a>`;
+        let acceptNewPatients = doctor[i].practices[0].accepts_new_patients;
+  
+        let rowNumber = i+1;
+        $(`#number${rowNumber}`).html(rowNumber);
+        $(`#firstName${rowNumber}`).html(firstName);
+        $(`#lastName${rowNumber}`).html(lastName);
+        $(`#address${rowNumber}`).html(address);
+        $(`#phoneNumber${rowNumber}`).html(phoneNumber);
+        $(`#website${rowNumber}`).html(website);
+        $(`#acceptNewPatients${rowNumber}`).html(acceptNewPatients);
+      }
     }
   });
 });
-
-
-// console.log(response.data[0].specialties[0].name); // To Add specialties
