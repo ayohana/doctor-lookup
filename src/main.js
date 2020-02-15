@@ -9,10 +9,11 @@ $(document).ready(function(){
   $("form#patientInfo").submit(function(event){
     event.preventDefault();
     let symptom = $("#symptom").val();
+    let lastName = $("#lastName").val();
 
     (async () => {
       let doctorService = new DoctorService();
-      const response = await doctorService.getList(symptom);
+      const response = await doctorService.getList(symptom, lastName);
       displayList(response);
     })();
 
