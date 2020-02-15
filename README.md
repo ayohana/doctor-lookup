@@ -6,12 +6,12 @@
 
 ## Description
 
-**This web application is for patients to look up for a list of doctors nearby who can treat their medical symptoms.** Patients will be able to enter their medical issue (e.g. "sore throat", "chest pain", etc.) into a form and retrieve a list of doctors in Seattle who can treat the medical issue they have specified.
+**This web application is for patients to look up a list of doctors nearby who can treat their medical symptoms.** Patients will be able to enter their medical issue (e.g. "rash") into a form and retrieve a list of doctors in Seattle who can treat the medical issue they have specified.
 
 ## User Stories
 
 * As a patient, I want to be able to search for health providers that are related to my medical symptoms so that I can see a provider with the correct medical specialty.
-* As a patient, I want to be able to see a list of health providers in my city so that I can save time.
+* As a patient, I want to be able to see a list of health providers in my city so that I can plan my route ahead and save time.
 
 ## Specs
 
@@ -26,7 +26,6 @@
 | **Program Displays Info of Each Doctor** | rash | Each Doctor: First name, Last name, Address, Phone number, Website and Status of "accepting new patients" |
 | **Program Returns Error Message in Console with Any Error Encounter** | any != 200 OK status | `console.error:` There was an error handling your request: `error.message` |
 | **Program Displays a Message if No Results in Query Response** | any unusual query | Sorry, no doctors meet the criteria you're looking for. |
-
 
 </details>
 
@@ -54,7 +53,7 @@ Feel free to provide feedback via email: adela.yohana@gmail.com.
 
 ## Technologies Used
 
-* BetterDoctor API
+* [BetterDoctor API](https://developer.betterdoctor.com/)
 * HTML
 * CSS
 * Bootstrap
