@@ -18,6 +18,7 @@ $(document).ready(function(){
 
     const displayList = function(response) {
       let doctor = response.data;
+      console.log(response)
       $("#listOfDoctors").show();
       for (let i = 0; i < doctor.length; i++) {
         let firstName = doctor[i].profile.first_name;
