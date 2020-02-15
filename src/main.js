@@ -6,7 +6,6 @@ import { DoctorService } from '../src/doctor-service';
 
 const displayList = function(response) {
   let doctor = response.data;
-  console.log(response)
   for (let i = 0; i < doctor.length; i++) {
     let firstName = doctor[i].profile.first_name;
     let lastName = doctor[i].profile.last_name;
@@ -25,7 +24,7 @@ const displayList = function(response) {
     $(`#website${rowNumber}`).html(website);
     $(`#acceptNewPatients${rowNumber}`).html(acceptNewPatients);
   }
-}
+};
 
 const checkResponse = function(response) {
   if (response.data.length === 0) {
@@ -41,18 +40,18 @@ const checkResponse = function(response) {
     $("#listOfDoctors").hide();
     $("#invalidInput").show();
   }
-}
+};
 
 $(document).ready(function(){
   $("form#patientInfo").submit(function(event){
     $("td").empty();
     event.preventDefault();
-    let symptom = $("#symptom").val();
-    let lastName = $("#lastName").val();
+    let issue = $("#issue").val();
+    let nameOfDoctor = $("#nameOfDoctor").val();
 
     (async () => {
       let doctorService = new DoctorService();
-      const response = await doctorService.getList(symptom, lastName);
+      const response = await doctorService.getList(issue, nameOfDoctor);
       checkResponse(response);
       displayList(response);
     })();

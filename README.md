@@ -6,7 +6,7 @@
 
 ## Description
 
-**This web application is for patients to look up a list of doctors nearby who can treat their medical symptoms.** Patients will be able to enter their medical issue (e.g. "rash") into a form and retrieve a list of doctors in Seattle who can treat the medical issue they have specified.
+**This web application is for patients to look up a list of doctors in Seattle who can treat their medical symptoms.** Patients will be able to enter their medical issue (e.g. "acne") into a form and retrieve a list of doctors in Seattle who can treat the medical issue they have specified.
 
 ## User Stories
 
@@ -23,12 +23,12 @@
 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program Gathers User Input of Medical Symptom** | rash | rash |
-| **Program Displays a List of Doctors Related to Symptom** | rash | List of Doctors best matched to rash |
-| **Program Displays a List of Doctors Related to Name Search** | Varley | List of Doctors with last name Varley |
-| **Program Displays Info of Each Doctor** | rash | Each Doctor: First name, Last name, Address, Phone number, Website and Status of "accepting new patients" |
+| **Program Gathers User Input of Medical Symptom** | acne | acne |
+| **Program Displays a List of Doctors Related to Symptom** | acne | List of Doctors best matched to treat acne in Seattle |
+| **Program Displays a List of Doctors Related to Name Search** | Varley | List of Doctors with last name Varley in Seattle |
+| **Program Displays Info of Each Doctor** | acne | Each Doctor: First name, Last name, Address, Phone number, Website and Status of "accepting new patients" |
 | **Program Returns Error Message in Console with Any Error Encounter** | any != 200 OK status | `console.error:` There was an error handling your request: `error.message` |
-| **Program Displays a Message if No Results in Query Response** | any unusual query | Sorry, no doctors meet the criteria you're looking for. |
+| **Program Displays a Message if No Results in Query Response** | any unusual search result | Sorry, please try again. |
 
 </details>
 
