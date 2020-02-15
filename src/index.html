@@ -20,11 +20,9 @@
           <label for="lastName" class="col-form-label col-form-label-lg">Doctor's Last Name:</label>
           <input type="text" class="form-control form-control-lg" id="lastName" placeholder="Varley">
         </div>
-
         <button class="btn btn-lg btn-danger">Find Providers</button>
       </form>
     </div>
-    
     <hr>
 
     <div class="container">
@@ -43,7 +41,7 @@
         </thead>
         <tbody>
           <tr>
-            <th id="number1" scope="row"></th>
+            <td id="number1" scope="row"></th>
             <td id="firstName1"></td>
             <td id="lastName1"></td>
             <td id="address1"></td>
@@ -52,7 +50,7 @@
             <td id="acceptNewPatients1"></td>
           </tr>
           <tr>
-            <th id="number2" scope="row"></th>
+            <td id="number2" scope="row"></th>
             <td id="firstName2"></td>
             <td id="lastName2"></td>
             <td id="address2"></td>
@@ -61,7 +59,7 @@
             <td id="acceptNewPatients2"></td>
           </tr>
           <tr>
-            <th id="number3" scope="row"></th>
+            <td id="number3" scope="row"></th>
             <td id="firstName3"></td>
             <td id="lastName3"></td>
             <td id="address3"></td>
@@ -70,7 +68,7 @@
             <td id="acceptNewPatients3"></td>
           </tr>
           <tr>
-            <th id="number4" scope="row"></th>
+            <td id="number4" scope="row"></th>
             <td id="firstName4"></td>
             <td id="lastName4"></td>
             <td id="address4"></td>
@@ -79,7 +77,7 @@
             <td id="acceptNewPatients4"></td>
           </tr>
           <tr>
-            <th id="number5" scope="row"></th>
+            <td id="number5" scope="row"></th>
             <td id="firstName5"></td>
             <td id="lastName5"></td>
             <td id="address5"></td>
@@ -89,6 +87,13 @@
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="container" id="noMatches">
+      <h4>Sorry, currently there are no doctors meeting your criteria. Please try again.</h4>
+    </div>
+    <div class="container" id="invalidInput">
+      <h4>Please try again.</h4>
     </div>
 
   </body>

@@ -10,8 +10,11 @@
 
 ## User Stories
 
-* As a patient, I want to be able to search for health providers that are related to my medical symptoms so that I can see a provider with the correct medical specialty.
-* As a patient, I want to be able to see a list of health providers in my city so that I can plan my route ahead and save time.
+* As a patient, I want to be able to search for health providers that are related to my medical symptoms so that I can see a provider with a related specialty.
+* As a patient, I want to be able to see a list of health providers in my city so that I can plan my route and save time.
+* As a patient, I want to be able to see my doctor's full name, credentials, practice address, phone number and website so that I know their contact information.
+* As a new patient, I want to be able to check if a doctor of my choice is currently accepting new patients so that I can decide whether I can make an appointment with them.
+* As a returning patient, I want to be able to search for my doctor's name and obtain their contact information so that I can call or email them for questions and appointments.
 
 ## Specs
 
