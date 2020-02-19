@@ -27,17 +27,23 @@ const displayList = function(response) {
 };
 
 const checkResponse = function(response) {
-  if (response.data.length === 0) {
-    $("#noMatches").show();
-    $("#listOfDoctors").hide();
-    $("#invalidInput").hide();
-  } else if (response.data.length != 0) {
-    $("#noMatches").hide();
-    $("#listOfDoctors").show();
-    $("#invalidInput").hide();
+  if (response) {
+    if (response.data.length === 0) {
+      $("#noMatches").show();
+      $("#listOfDoctors").hide();
+      $("#invalidInput").hide();
+      $("#error").hide();
+    } else {
+      displayList(response);
+      $("#noMatches").hide();
+      $("#listOfDoctors").show();
+      $("#invalidInput").hide();
+      $("#error").hide();
+    }
   } else {
     $("#noMatches").hide();
     $("#listOfDoctors").hide();
+    $("#error").show();
     $("#invalidInput").show();
   }
 };
@@ -53,7 +59,6 @@ $(document).ready(function(){
       let doctorService = new DoctorService();
       const response = await doctorService.getList(issue, nameOfDoctor);
       checkResponse(response);
-      displayList(response);
     })();
   });
 });
