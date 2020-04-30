@@ -32,7 +32,7 @@
     "bootstrap": "^4.4.1",
     "file-loader": "^5.0.2",
     "handlebars": "^4.7.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.16.1",
     "serialize-javascript": "^2.1.1",
     "url-loader": "^3.0.0"
